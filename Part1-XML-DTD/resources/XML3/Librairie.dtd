@@ -1,0 +1,47 @@
+
+
+<!ELEMENT livre (titre, auteurs, description, prix)>
+    <!ATTLIST livre ISBN CDATA #REQUIRED >
+
+<!ELEMENT librairie (entete, livre+)>
+
+<!-- contenu entête -->
+<!ELEMENT strong (#PCDATA)>
+<!ELEMENT em (#PCDATA)>
+<!ELEMENT img EMPTY>
+        <!ATTLIST img source CDATA #REQUIRED
+                  title CDATA #IMPLIED
+                >
+
+<!ELEMENT titre (#PCDATA)>
+
+<!-- contenu auteur -->
+
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+
+
+<!ENTITY % texteFormate "(#PCDATA | strong | em | img)*">
+<!ENTITY % identite "(nom, prenom?)">
+
+<!ELEMENT auteur %identite;>
+<!ELEMENT entete %texteFormate;>
+
+<!ELEMENT direction %identite;>
+<!ELEMENT membres (#PCDATA)>
+
+<!ELEMENT collectif (direction, membres) >
+
+<!ELEMENT auteurs (auteur+ | collectif)>
+
+<!ELEMENT description %texteFormate;>
+
+<!ELEMENT prix (#PCDATA)>
+    <!ATTLIST prix
+                   devise (euro | livre | dollar) "euro"
+                   type (HT | TTC) "HT"
+                   tva NMTOKEN #FIXED "5.5"
+    >
+
+<!ENTITY copyright "©Librairie &amp; Internet 2020 ">
+

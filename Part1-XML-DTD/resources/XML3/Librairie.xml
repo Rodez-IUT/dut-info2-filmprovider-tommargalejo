@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE librairie SYSTEM "Librairie.dtd">
+<librairie>
+    <entete>Le centre de documentation de <em>l'IUT de rodez</em>. &copyright;</entete>
+    <livre ISBN="TSJ01">
+        <titre>Tout sur le java</titre>
+        <auteurs>
+            <auteur>
+                <nom>
+                    Delanoy
+                </nom>
+            </auteur>
+            <auteur>
+                <nom>
+                    John Doe
+                </nom>
+            </auteur>
+        </auteurs>
+        <description>Les bases de la programmation en <strong>Java</strong></description>
+        <prix devise="euro" tva="5.5" type="TTC">45</prix>
+    </livre>
+    <livre ISBN="test">
+        <titre>Bassiste magazine</titre>
+        <auteurs>
+            <collectif>
+                <direction>
+                    <nom>Auteur 1</nom>
+                    <prenom>renom de l'auteur</prenom>
+                </direction>
+                <membres>...</membres>
+            </collectif>
+        </auteurs>
+        <description>Les bases de la programmation en <strong>Java</strong></description>
+        <prix devise="euro" tva="5.5" type="TTC">35</prix>
+    </livre>
+</librairie>
