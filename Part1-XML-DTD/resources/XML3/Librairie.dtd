@@ -1,5 +1,3 @@
-
-
 <!ELEMENT livre (titre, auteurs, description, prix)>
     <!ATTLIST livre ISBN CDATA #REQUIRED >
 
