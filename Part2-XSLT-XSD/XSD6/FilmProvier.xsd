@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!--Films-->
+    <xs:element name="films">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="realisateur"/>
+                <xs:element ref="film"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+<!--Réalisateur-->
+    <xs:element name="realisateur">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="prenom" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="nom" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="id_realisateur" use="required"/>
+        </xs:complexType>
+        <xs:key name="pkReal">
+            <xs:selector xpath="realisateur"></xs:selector>
+            <xs:field xpath="@id_realisateur"></xs:field>
+        </xs:key>
+    </xs:element>
+
+<!--Film-->
+    <xs:element name="film">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titre" type="xs:string" maxOccurs="1" minOccurs="1"/>
+                <xs:element ref="resume" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="id_film" type="xs:string" use="required"/>
+            <xs:attribute name="id_realisateur" type="xs:string" use="required"/>
+            <xs:attribute name="annee" type="xs:integer" use="required"/>
+        </xs:complexType>
+        <xs:key name="pkFilm">
+            <xs:selector xpath="film"></xs:selector>
+            <xs:field xpath="@id_film"></xs:field>
+        </xs:key>
+        <xs:keyref refer="pkReal" name="fkRealFilm">
+            <xs:selector xpath="film"/>
+            <xs:field xpath="@id_realisateur"/>
+        </xs:keyref>
+    </xs:element>
+
+<!--Resume-->
+    <xs:element name="resume">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="image" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:attribute name="source" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="text" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
