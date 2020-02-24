@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fox:films
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="FilmProvier.xsd"
+    xmlns:fox="http://formationxml/filmprovider">
+    <fox:realisateur id_realisateur="real_01">
+        <fox:prenom>Martin</fox:prenom>
+        <fox:nom>Scorsese</fox:nom>
+    </fox:realisateur>
+    <fox:realisateur id_realisateur="real_02">
+        <fox:prenom>Quentin</fox:prenom>
+        <fox:nom>Tarantino</fox:nom>
+    </fox:realisateur>
+    <fox:realisateur id_realisateur="real_03">
+        <fox:prenom>Steven</fox:prenom>
+        <fox:nom>Spielberg</fox:nom>
+    </fox:realisateur>
+    <fox:film id_film="film_01" id_realisateur="real_03" annee="2001">
+        <fox:titre>Minority Report</fox:titre>
+        <fox:resume>
+            <fox:text>Un homme est victime d'une machination. Il est pris au piège d'un système qu'il a l'habitude de controler.</fox:text>
+        </fox:resume>
+    </fox:film>
+    <fox:film id_film="film_02" id_realisateur="real_02" annee="2003">
+        <fox:titre>Kill Bill</fox:titre>
+        <fox:resume>
+            <fox:image source="killbill.jpg"/>
+            <fox:text>Une femme se venge des personnes qui ont voulu l'assassiner.</fox:text>
+        </fox:resume>
+    </fox:film>
+    <fox:film id_film="film_03" id_realisateur="real_01" annee="1995">
+        <fox:titre>Casino</fox:titre>
+        <fox:resume>
+            <fox:image source="deniro.jpg"/>
+            <fox:text>Le monde de la mafia italienne mêlée à celui des casinos...</fox:text>
+        </fox:resume>
+    </fox:film>
+
+    <fox:film id_film="film_04" id_realisateur="real_01" annee="1990">
+        <fox:titre>Les affranchis</fox:titre>
+        <fox:resume>
+            <fox:text>Inspiré d'un fait réel : histoire de mafia italienne.</fox:text>
+        </fox:resume>
+    </fox:film>
+</fox:films>
