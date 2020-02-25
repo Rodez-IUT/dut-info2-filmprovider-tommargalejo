@@ -24,7 +24,7 @@
         <fox:titre>Film 2</fox:titre>
         <fox:resume>
             <fox:image source="killbill.jpg"/>
-            <fox:text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, culpa delectus dignissimos doloremque, doloribus enim eos fugit ipsam itaque laborum maiores natus nihil pariatur quae sint sunt, temporibus voluptate voluptatum?</fox:text>
+            <fox:text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, culpa delectus dignissimos doloremque, doloribus enim beosrfugit ipsam itaque laborum maiores natus nihil pariatur quae sint sunt, temporibus voluptate voluptatum?</fox:text>
         </fox:resume>
     </fox:film>
 
